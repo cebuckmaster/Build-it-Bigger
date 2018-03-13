@@ -15,7 +15,7 @@ android {
         config {
             keyAlias 'carl'
             keyPassword 'password'
-            storeFile file('C:/Users/cebuc/Documents/GitHub/Build It Bigger/keystore.jks')
+            storeFile file('keystore.jks')
             storePassword 'password'
         }
     }
@@ -23,7 +23,7 @@ android {
     buildToolsVersion "26.0.3"
     defaultConfig {
         applicationId "com.udacity.gradle.builditbigger"
-        minSdkVersion 21
+        minSdkVersion 23
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"
@@ -57,7 +57,7 @@ dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     endpointsServer project(path: ':backend', configuration: 'endpoints')
     implementation 'com.android.support:appcompat-v7:26.1.0'
-    implementation 'com.google.android.gms:play-services-ads:11.8.0'
+    freeImplementation 'com.google.android.gms:play-services-ads:11.8.0'
     implementation 'com.google.code.findbugs:jsr305:3.0.1'
     implementation project(':jokeprovider')
     implementation project(':jokedisplayer')
